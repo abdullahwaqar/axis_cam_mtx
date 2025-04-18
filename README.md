@@ -4,17 +4,17 @@ This ACAP packages the scripts and files required to install the MediaMTX server
 
 Current version 1.6.0
 
-
 ## Warning
+
 Axis is making changes to its firmware that will include the removal of root privileges from ACAP.
 With the release of Axis OS 12, ACAP's requiring root will no longer work.
 The MediaMTX ACAP requires root to function.
- 
-You can read more here
- 
-https://help.axis.com/en-us/axis-os#upcoming-breaking-changes
 
-If you have a use case where certain functionality used by an ACAP application currently requires root-user permissions or have a question about ACAP application signing, please contact Axis at acap-privileges@axis.com
+You can read more here
+
+<https://help.axis.com/en-us/axis-os#upcoming-breaking-changes>
+
+If you have a use case where certain functionality used by an ACAP application currently requires root-user permissions or have a question about ACAP application signing, please contact Axis at <acap-privileges@axis.com>
 
 Thank you for your continued support.
 
@@ -24,9 +24,9 @@ MediaMTX (formerly rtsp-simple-server) is a ready-to-use and zero-dependency rea
 
 ## Links
 
-https://github.com/bluenviron/mediamtx
+<https://github.com/bluenviron/mediamtx>
 
-https://www.axis.com/
+<https://www.axis.com/>
 
 ## Compatibility
 
@@ -44,27 +44,28 @@ note that you need to enclose your password with quotes (`'`) if it contains spe
 The recommended way to install this ACAP is to use the pre built eap file.
 Go to "Apps" on the camera and click "Add app".
 
-
 ## Using the MediaMTX ACAP
 
 You will need to upload your own mediamtx.yml config file via sftp otherwise a blank config will be used.
 
 An exapmple is included and you need to place it in /usr/local/packages/MediaMTX
 
-https://github.com/Mo3he/Axis_Cam_MediaMTX/blob/main/mediamtx.yml
+<https://github.com/Mo3he/Axis_Cam_MediaMTX/blob/main/mediamtx.yml>
 
-https://github.com/bluenviron/mediamtx?tab=readme-ov-file#configuration
+<https://github.com/bluenviron/mediamtx?tab=readme-ov-file#configuration>
 
 For example
 
 Allow anonymous viewing of RTSP stream
 
-Adding 
+Adding
+
 ```
 paths:
       proxied:
           source: rtsp://user:password@IPAddress/axis-media/media.amp?videocodec=h264&resolution=640x480
 ```
+
 at the end of the mediamtx.yml will make the stream available at rtsp://IPAddress:8554/proxied with no authentication.
 
 The MediaMTX ACAP will run a script on startup that sets the required permissions and starts the service and app.
@@ -74,19 +75,15 @@ Further commands can then be issues via ssh.
 
 When uninstalling the ACAP, all changes and files are removed from the camera.
 
-
 ## Build from source
-To build, 
+
+To build,
 From main directory of the version you want (arm/aarch64)
 
 ```
 docker build --tag <package name> . 
 ```
+
 ```
 docker cp $(docker create <package name>):/opt/app ./build 
 ```
-
-
-
-
-
