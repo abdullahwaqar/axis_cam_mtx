@@ -705,6 +705,5 @@ paths:
   # Settings under path "all_others" are applied to all paths that
   # do not match another entry.
   axis:
-    source: rtsp://root:cdcdefender@[::1]/axis-media/media.amp
 
   all_others:
