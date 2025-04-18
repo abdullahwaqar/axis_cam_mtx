@@ -48,10 +48,6 @@ Go to "Apps" on the camera and click "Add app".
 
 You will need to upload your own mediamtx.yml config file via sftp otherwise a blank config will be used.
 
-An exapmple is included and you need to place it in /usr/local/packages/MediaMTX
-
-<https://github.com/Mo3he/Axis_Cam_MediaMTX/blob/main/mediamtx.yml>
-
 <https://github.com/bluenviron/mediamtx?tab=readme-ov-file#configuration>
 
 For example
